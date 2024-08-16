@@ -1,0 +1,17 @@
+==============================================================================
+SwagLabs :: This suite includes login tests                                   
+==============================================================================
+
+SUCCESS: Specified value was saved.
+
+SUCCESS: Specified value was saved.
+
+SUCCESS: Specified value was saved.
+Navigate to Swag Labs Website and Verify Page Title :: Open a webs... | PASS |
+------------------------------------------------------------------------------
+Enter Valid Username and Password in SauceLabs Login Page :: Open ... | PASS |
+------------------------------------------------------------------------------
+SwagLabs :: This suite includes login tests                           | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master\Results\pabot_results\0\output.xml

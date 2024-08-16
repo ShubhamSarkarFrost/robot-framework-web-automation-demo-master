@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.9.9 on win32)" generated="2024-08-16T23:23:23.250033" rpa="false" schemaversion="5">
+<suite id="s1" name="SwagLabs" source="C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master\test-cases\SwagLabs.robot">
+<kw name="Open New Browser" owner="BrowserFunc" type="SETUP">
+<kw name="Download And Set Up Drivers" owner="MultiBrowserWebDriver">
+<msg time="2024-08-16T23:23:23.500081" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-08-16T23:23:24.146549" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-08-16T23:23:24.350451" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-08-16T23:23:24.585084" level="INFO">Driver [C:\Users\frost\.wdm\drivers\chromedriver\win64\127.0.6533.119\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg time="2024-08-16T23:23:24.585084" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-08-16T23:23:25.820571" level="INFO">Get LATEST geckodriver version for 129.0 firefox</msg>
+<msg time="2024-08-16T23:23:26.345167" level="INFO">Get LATEST geckodriver version for 129.0 firefox</msg>
+<msg time="2024-08-16T23:23:26.579319" level="INFO">Driver [C:\Users\frost\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe] found in cache</msg>
+<msg time="2024-08-16T23:23:26.579319" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-08-16T23:23:27.805433" level="INFO">Get LATEST edgedriver version for Edge 127.0.2651</msg>
+<msg time="2024-08-16T23:23:28.181337" level="INFO">Get LATEST edgedriver version for Edge 127.0.2651</msg>
+<msg time="2024-08-16T23:23:28.463264" level="INFO">Driver [C:\Users\frost\.wdm\drivers\edgedriver\win64\127.0.2651.98\msedgedriver.exe] found in cache</msg>
+<msg time="2024-08-16T23:23:28.809155" level="INFO">Chrome driver installed at: C:\Users\frost\.wdm\drivers\chromedriver\win64\127.0.6533.119\chromedriver-win32/chromedriver.exe
+Firefox driver installed at: C:\Users\frost\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe
+Edge driver installed at: C:\Users\frost\.wdm\drivers\edgedriver\win64\127.0.2651.98\msedgedriver.exe</msg>
+<status status="PASS" start="2024-08-16T23:23:23.500081" elapsed="5.309074"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-08-16T23:23:28.809155" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-16T23:23:28.809155" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-16T23:23:28.809155" elapsed="3.845731"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.654886" elapsed="0.020348"/>
+</kw>
+<arg>${SWAG_LABS_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>${SELENIUM_TIMEOUT}</arg>
+<status status="PASS" start="2024-08-16T23:23:23.500081" elapsed="9.175153"/>
+</kw>
+<test id="s1-t1" name="Navigate to Swag Labs Website and Verify Page Title" line="16">
+<kw name="Get Current Page Title" owner="CommonPo">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-08-16T23:23:32.681631" level="INFO">${page_title} = Swag Labs</msg>
+<var>${page_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.675234" elapsed="0.006397"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2024-08-16T23:23:32.682712" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${page_title}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.681631" elapsed="0.001081"/>
+</kw>
+<msg time="2024-08-16T23:23:32.682712" level="INFO">${current_page_title} = Swag Labs</msg>
+<var>${current_page_title}</var>
+<doc>Gets the Current Page Title and Returns it  ...</doc>
+<status status="PASS" start="2024-08-16T23:23:32.675234" elapsed="0.007478"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${current_page_title}</arg>
+<arg>${SWAG_LABS_TITLE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Take Full Page Screenshot" owner="CommonPo">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-08-16T23:23:32.682712" level="INFO">${current_date} = 2024-08-16</msg>
+<var>${current_date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-08-16T23:23:32.682712" level="INFO">${epooch_time} = 1723830812</msg>
+<var>${epooch_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-08-16T23:23:32.682712" level="INFO">${string_curr_date} = 2024-08-16</msg>
+<var>${string_curr_date}</var>
+<arg>${current_date}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2024-08-16T23:23:32.682712" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master\screenshots"&gt;C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master\screenshots&lt;/a&gt;' exists.</msg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<msg time="2024-08-16T23:23:32.682712" level="INFO">${dir_exists} = True</msg>
+<var>${dir_exists}</var>
+<arg>Directory Should Exist</arg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${dir_exists}' == 'False'</arg>
+<arg>Create Directory</arg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-08-16T23:23:32.682712" level="INFO">${SUBFOLDER_DIRECTORY} = C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master/screenshots/2024-08-16</msg>
+<var>${SUBFOLDER_DIRECTORY}</var>
+<arg>SEPARATOR=</arg>
+<arg>${SCREENSHOT_DIR}</arg>
+<arg>/</arg>
+<arg>${string_curr_date}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2024-08-16T23:23:32.682712" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master\screenshots\2024-08-16"&gt;C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master\screenshots\2024-08-16&lt;/a&gt;' exists.</msg>
+<arg>${SUBFOLDER_DIRECTORY}</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<msg time="2024-08-16T23:23:32.682712" level="INFO">${subdir_exists} = True</msg>
+<var>${subdir_exists}</var>
+<arg>Directory Should Exist</arg>
+<arg>${SUBFOLDER_DIRECTORY}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${dir_exists}' == 'False'</arg>
+<arg>Create Directory</arg>
+<arg>${SUBFOLDER_DIRECTORY}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-08-16T23:23:32.682712" level="INFO">${screenshot_name} = Navigate to Swag Labs Website and Verify Page Title--2024-08-16</msg>
+<var>${screenshot_name}</var>
+<arg>SEPARATOR=--</arg>
+<arg>${SCREENSHOT_NAME}</arg>
+<arg>${string_curr_date}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-08-16T23:23:32.682712" level="INFO">${screenshot_updated_name} = Navigate to Swag Labs Website and Verify Page Title--2024-08-161723830812.png</msg>
+<var>${screenshot_updated_name}</var>
+<arg>SEPARATOR=</arg>
+<arg>${screenshot_name}</arg>
+<arg>${epooch_time}</arg>
+<arg>${extension}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-08-16T23:23:32.682712" level="INFO">${screenshot_path} = C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master/screenshots/2024-08-16/Navigate to Swag Labs Website and Verify Page Title--2024-08-161723830812.png</msg>
+<var>${screenshot_path}</var>
+<arg>${SUBFOLDER_DIRECTORY}/${screenshot_updated_name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-08-16T23:23:36.132990" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../screenshots/2024-08-16/Navigate%20to%20Swag%20Labs%20Website%20and%20Verify%20Page%20Title--2024-08-161723830812.png"&gt;&lt;img src="../../../screenshots/2024-08-16/Navigate%20to%20Swag%20Labs%20Website%20and%20Verify%20Page%20Title--2024-08-161723830812.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${screenshot_path}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="3.450278"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-16T23:23:36.132990" level="INFO">Screenshot saved at: C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master/screenshots/2024-08-16/Navigate to Swag Labs Website and Verify Page Title--2024-08-161723830812.png</msg>
+<arg>Screenshot saved at: ${screenshot_path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.132990" elapsed="0.000000"/>
+</kw>
+<arg>${TEST NAME}</arg>
+<doc>The Following Keyword Takes Full Page Screenshot ...</doc>
+<status status="PASS" start="2024-08-16T23:23:32.682712" elapsed="3.450278"/>
+</kw>
+<doc>Open a website and verify Page Title.</doc>
+<status status="PASS" start="2024-08-16T23:23:32.675234" elapsed="3.457756"/>
+</test>
+<test id="s1-t2" name="Enter Valid Username and Password in SauceLabs Login Page" line="23">
+<kw name="Login To The Application" owner="LoginPo">
+<kw name="Enter Username" owner="LoginPo">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${usernameTextBox}</arg>
+<arg>timeout= ${PAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.132990" elapsed="0.016061"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-16T23:23:36.149051" level="INFO">Element 'id=user-name' is displayed.</msg>
+<arg>${usernameTextBox}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.149051" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-16T23:23:36.149051" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${usernameTextBox}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.149051" elapsed="0.082197"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-08-16T23:23:36.132990" elapsed="0.099378"/>
+</kw>
+<kw name="Enter Password" owner="LoginPo">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${passwordTextBox}</arg>
+<arg>timeout= ${PAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.232368" elapsed="0.008342"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-16T23:23:36.240710" level="INFO">Element 'id=password' is displayed.</msg>
+<arg>${passwordTextBox}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.240710" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-16T23:23:36.240710" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${passwordTextBox}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.240710" elapsed="0.066029"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-08-16T23:23:36.232368" elapsed="0.074371"/>
+</kw>
+<kw name="Click Submit Button" owner="LoginPo">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<arg>timeout= ${PAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.309930" elapsed="0.008105"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.318035" elapsed="0.006000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-16T23:23:36.324035" level="INFO">Clicking element 'xpath=//input[@id='login-button']'.</msg>
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.324035" elapsed="0.057771"/>
+</kw>
+<status status="PASS" start="2024-08-16T23:23:36.309930" elapsed="0.071876"/>
+</kw>
+<arg>${STANDARD_USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-08-16T23:23:36.132990" elapsed="0.248816"/>
+</kw>
+<kw name="Verify Cart Icon is Visible" owner="LoginPo">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${carticon}</arg>
+<arg>timeout= ${PAGE_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.381806" elapsed="0.010638"/>
+</kw>
+<status status="PASS" start="2024-08-16T23:23:36.381806" elapsed="0.010638"/>
+</kw>
+<kw name="Take Full Page Screenshot" owner="CommonPo">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-08-16T23:23:36.393552" level="INFO">${current_date} = 2024-08-16</msg>
+<var>${current_date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.393552" elapsed="0.000000"/>
+</kw>
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2024-08-16T23:23:36.394573" level="INFO">${epooch_time} = 1723830816</msg>
+<var>${epooch_time}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.393552" elapsed="0.001021"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-08-16T23:23:36.394573" level="INFO">${string_curr_date} = 2024-08-16</msg>
+<var>${string_curr_date}</var>
+<arg>${current_date}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.394573" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2024-08-16T23:23:36.395584" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master\screenshots"&gt;C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master\screenshots&lt;/a&gt;' exists.</msg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.395584" elapsed="0.000000"/>
+</kw>
+<msg time="2024-08-16T23:23:36.395584" level="INFO">${dir_exists} = True</msg>
+<var>${dir_exists}</var>
+<arg>Directory Should Exist</arg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.394573" elapsed="0.001011"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${dir_exists}' == 'False'</arg>
+<arg>Create Directory</arg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.395584" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-08-16T23:23:36.396584" level="INFO">${SUBFOLDER_DIRECTORY} = C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master/screenshots/2024-08-16</msg>
+<var>${SUBFOLDER_DIRECTORY}</var>
+<arg>SEPARATOR=</arg>
+<arg>${SCREENSHOT_DIR}</arg>
+<arg>/</arg>
+<arg>${string_curr_date}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.396584" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Directory Should Exist" owner="OperatingSystem">
+<msg time="2024-08-16T23:23:36.396584" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master\screenshots\2024-08-16"&gt;C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master\screenshots\2024-08-16&lt;/a&gt;' exists.</msg>
+<arg>${SUBFOLDER_DIRECTORY}</arg>
+<doc>Fails unless the given path points to an existing directory.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.396584" elapsed="0.000997"/>
+</kw>
+<msg time="2024-08-16T23:23:36.397581" level="INFO">${subdir_exists} = True</msg>
+<var>${subdir_exists}</var>
+<arg>Directory Should Exist</arg>
+<arg>${SUBFOLDER_DIRECTORY}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.396584" elapsed="0.000997"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${dir_exists}' == 'False'</arg>
+<arg>Create Directory</arg>
+<arg>${SUBFOLDER_DIRECTORY}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.397581" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-08-16T23:23:36.397581" level="INFO">${screenshot_name} = Enter Valid Username and Password in SauceLabs Login Page--2024-08-16</msg>
+<var>${screenshot_name}</var>
+<arg>SEPARATOR=--</arg>
+<arg>${SCREENSHOT_NAME}</arg>
+<arg>${string_curr_date}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.397581" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-08-16T23:23:36.398584" level="INFO">${screenshot_updated_name} = Enter Valid Username and Password in SauceLabs Login Page--2024-08-161723830816.png</msg>
+<var>${screenshot_updated_name}</var>
+<arg>SEPARATOR=</arg>
+<arg>${screenshot_name}</arg>
+<arg>${epooch_time}</arg>
+<arg>${extension}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.397581" elapsed="0.001003"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-08-16T23:23:36.398584" level="INFO">${screenshot_path} = C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master/screenshots/2024-08-16/Enter Valid Username and Password in SauceLabs Login Page--2024-08-161723830816.png</msg>
+<var>${screenshot_path}</var>
+<arg>${SUBFOLDER_DIRECTORY}/${screenshot_updated_name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.398584" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-08-16T23:23:36.583683" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../screenshots/2024-08-16/Enter%20Valid%20Username%20and%20Password%20in%20SauceLabs%20Login%20Page--2024-08-161723830816.png"&gt;&lt;img src="../../../screenshots/2024-08-16/Enter%20Valid%20Username%20and%20Password%20in%20SauceLabs%20Login%20Page--2024-08-161723830816.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${screenshot_path}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.398584" elapsed="0.185099"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-16T23:23:36.584684" level="INFO">Screenshot saved at: C:\Users\frost\Downloads\Compressed\robot-framework-web-automation-demo-master/screenshots/2024-08-16/Enter Valid Username and Password in SauceLabs Login Page--2024-08-161723830816.png</msg>
+<arg>Screenshot saved at: ${screenshot_path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.584684" elapsed="0.000000"/>
+</kw>
+<arg>${TEST NAME}</arg>
+<doc>The Following Keyword Takes Full Page Screenshot ...</doc>
+<status status="PASS" start="2024-08-16T23:23:36.392444" elapsed="0.192240"/>
+</kw>
+<doc>Open Sauce Labs Website and Login with Valid Details.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.132990" elapsed="0.451694"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-16T23:23:36.586682" elapsed="2.096028"/>
+</kw>
+<doc>This suite includes login tests</doc>
+<status status="PASS" start="2024-08-16T23:23:23.250033" elapsed="15.432677"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="SwagLabs">SwagLabs</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
