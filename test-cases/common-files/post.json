@@ -1,0 +1,13 @@
+{
+    "firstName": "David",
+    "lastName": "Muller",
+    "birthdate": "1971-01-02",
+    "email": "david@getnada.com",
+    "phone": "8005555555",
+    "street1": "1 Main St.",
+    "street2": "Muller Apartment A",
+    "city": "Texas",
+    "stateProvince": "US",
+    "postalCode": "12345",
+    "country": "USA"
+}
